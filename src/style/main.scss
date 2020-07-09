@@ -141,11 +141,88 @@ header {
 }
 
 
+// registration form
+
+.section-form{
+    margin: 0;
+    font-family: $font;
+    background: #ffffff;
+    font-size: 18px;
+    height: 100vh;
+    display: grid;
+}
+.container {
+    margin: 0 auto;
+    text-align: center;
+
+    .left {
+        background: url(../images//women-s-pink-sweatshirt-and-brown-plaid-skirt-794064.jpg);
+        background-size: cover ;
+       
+        padding: 1em;
+        a.logo {
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: left;
+            color: black;
+            font-weight: bold;
+            padding: 1em;
+            z-index: 20;
+            margin: 0;
+        }
+    }
+
+    .right p {
+        margin: 20px 0 10px;   
+    }
+
+    .input-text, label {
+        text-align: center;
+        font-weight: 400;
+    }
+    
+    input, button {
+        width: calc(100% - 4em);
+        padding: .3em;
+        font-size: 1rem;
+        outline: none;
+        margin: 10px;
+        
+    }
+    .attachment{
+       text-align: left;
+    }
+    button.ftn {
+        width: calc(100% - 3em);
+        margin: 0;
+        background: $primary-color;
+        color: white;
+        cursor: pointer;
+        border: none;
+        height: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+// end form
 
 @media only screen and (min-width:768px) {
     html {
         font-size: 18px;
     }
+
+    .section-form {
+        font-size: 20px;
+        .left {
+            // width: 50%;
+            background-size: cover;
+        }
+    }
+    button.ftn {
+        width: calc(60% - 1em) !important;
+    }
+    
 }
 
 
@@ -173,6 +250,38 @@ header {
         grid-template-rows: auto;
         align-items: center;
     }
+
+    .container {
+        width: 100%;
+    }
+    .inner-form {
+        display: grid;
+        grid-template-columns: 55% auto;
+        .left {
+            padding: 0 2em;
+            height: 100vh;
+            display: grid;
+        }
+
+        .right {
+            text-align: right;
+            align-self: center;
+            padding: 0 2em 1.5em;
+            justify-content: center;
+            input {
+                width: calc(100% - 1em) !important;
+                margin: 20px 0;
+            }
+            .attachment {
+                width: calc(100% - 1em) !important;
+                margin: 20px 0;;
+            }
+            button.ftn {
+                width: 100% !important;
+            }
+        }
+    }
+    
 }
 
 

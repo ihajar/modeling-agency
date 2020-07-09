@@ -1,13 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import Form from "../components/form"
 
 
 const SecondPage = () => (
-  <Layout>
-  
-  </Layout>
+  <Form/>
 )
 
 export default SecondPage

@@ -1,15 +1,16 @@
 
 
-import React, {useRef, useEffect, useState} from "react"
+import React, { useRef, useEffect, useState} from "react"
 import gsap from 'gsap';
-// import { useStaticQuery, graphql } from "gatsby"
-// import {TweenMax, TimelineMax, Power3} from 'gsap';
+import {Link} from 'gatsby';
+import Form from './form'
 import "../style/main.scss";
 
 
 
 
-function Layout() {
+function Home() {
+  
 
   let app = useRef(null)
   // let section = useRef(null)
@@ -46,9 +47,9 @@ function Layout() {
   })
  
   return (
-    <body  ref={el => (app = el)}>
+    <body ref={el => (app = el)}>
       <header>
-        <a href="" class="logo">CatWalk</a>
+        <a href="" className="logo">CatWalk</a>
         <nav>
           <ul>
             <li><a href="">Home</a></li>
@@ -67,7 +68,9 @@ function Layout() {
 
             <div className="anim-panel">
               <p className="subtitle">By the world's largest brands in the model industry. </p>
-              <a href="#" className="read-btn primary">Register Now</a>
+              <a href="/register" className="read-btn primary" >
+                Register Now
+              </a>
             </div>
           </div>      
         </section>
@@ -105,4 +108,4 @@ function Layout() {
 
 
 
-export default Layout;
+export default Home;
