@@ -5,47 +5,43 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, {useRef, useEffect} from "react"
-import PropTypes from "prop-types"
+import React, {useEffect} from "react"
+
 // import { useStaticQuery, graphql } from "gatsby"
 import {TweenMax, TimelineMax, Power3} from 'gsap';
-import "../style/main.scss"
+import "../style/main.scss";
 
-
-document.addEventListener("DOMContentLoaded", function(event) {
-
-  window.addEventListener("load", function(e) {
-    document.body.style.display = "block"
-    
-    let tl = new TimelineMax()
-
-    
-
-  
-      tl.staggerFrom('section', 2, {
-        opacity: 0,
-        scale: .5,
-        ease: Power3.easeOut
-      }, 0.2)
-
-      tl.staggerFrom('h1, h2', .5, {
-        opacity: 0,
-        y: -40,
-        ease: Power3.easeInOut
-      }, 0.2, "-=2")
-
-      tl.staggerFrom('.anim-panel', 1, {
-        opacity: 0,
-        y: -40,
-        ease: Power3.easeInOut
-      }, 0.2, "-=1.5")
-
-    })
-  }, false);
 
 
 
 function Layout() {
+  // document.addEventListener("DOMContentLoaded", function(event){
+  //   window.addEventListener("load", function(e){
+  //     document.body.style.display= "block";
+  
+  //     let tl = new TimelineMax()
+     
+  //     tl.staggerFrom('section', 2, {
+  //       opacity: 0,
+  //       scale: .5,
+  //       ease: Power3.easeOut
+  //     }, 0.2)
+  
+  //     tl.staggerFrom('h1, h2', .5, {
+  //       opacity: 0,
+  //       y: -40,
+  //       ease: Power3.easeInOut
+  //     }, 0.2, "-=2")
+  
+  //     tl.staggerFrom('.anim-panel', 1, {
+  //       opacity: 0,
+  //       y: -40,
+  //       ease: Power3.easeInOut
+  //     }, 0.2, "-=1.5")
+    
+  
+  //   }, false)
+  // });
   
   let tl = new TimelineMax()
 
@@ -55,7 +51,7 @@ function Layout() {
     // const section2 = sections.lastElementChild;
 
 
-    TweenMax.to(app, 0, {css: {visibility: 'visible'}})
+    // TweenMax.to(app, 0, {css: {visibility: 'visible'}})
     tl.staggerFrom('section', 2, {
       opacity: 0,
       scale: .5,
@@ -134,8 +130,6 @@ function Layout() {
   )
 }
 
-// Layout.propTypes = {
-//   children: PropTypes.node.isRequired,
-// }
+
 
 export default Layout;
