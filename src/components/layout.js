@@ -1,79 +1,52 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
 
-import React, {useEffect} from "react"
 
+import React, {useRef, useEffect, useState} from "react"
+import gsap from 'gsap';
 // import { useStaticQuery, graphql } from "gatsby"
-import {TweenMax, TimelineMax, Power3} from 'gsap';
+// import {TweenMax, TimelineMax, Power3} from 'gsap';
 import "../style/main.scss";
 
 
 
 
 function Layout() {
-  // document.addEventListener("DOMContentLoaded", function(event){
-  //   window.addEventListener("load", function(e){
-  //     document.body.style.display= "block";
+
+  let app = useRef(null)
+  // let section = useRef(null)
+  // let content = useRef(null)
   
-  //     let tl = new TimelineMax()
-     
-  //     tl.staggerFrom('section', 2, {
-  //       opacity: 0,
-  //       scale: .5,
-  //       ease: Power3.easeOut
-  //     }, 0.2)
+  const [tl] = useState(gsap.timeline({ delay: 0.8 }))
   
-  //     tl.staggerFrom('h1, h2', .5, {
-  //       opacity: 0,
-  //       y: -40,
-  //       ease: Power3.easeInOut
-  //     }, 0.2, "-=2")
-  
-  //     tl.staggerFrom('.anim-panel', 1, {
-  //       opacity: 0,
-  //       y: -40,
-  //       ease: Power3.easeInOut
-  //     }, 0.2, "-=1.5")
-    
-  
-  //   }, false)
-  // });
-  
-  let tl = new TimelineMax()
+  // let tl = new TimelineMax()
 
   useEffect(() => {
-    // sections variables
-    // const section1 = setions.firstElementChild;
-    // const section2 = sections.lastElementChild;
 
-
-    // TweenMax.to(app, 0, {css: {visibility: 'visible'}})
+    tl.from(app, 0, {
+      css: {visibility: "visible"},
+    })
+    
     tl.staggerFrom('section', 2, {
       opacity: 0,
       scale: .5,
-      ease: Power3.easeOut
+      ease: "power3.easeOut"
     }, 0.2)
 
     tl.staggerFrom('h1, h2', .5, {
       opacity: 0,
       y: -40,
-      ease: Power3.easeInOut
+      ease:  "power3.easeOut"
     }, 0.2, "-=2")
 
     tl.staggerFrom('.anim-panel', 1, {
       opacity: 0,
       y: -40,
-      ease: Power3.easeInOut
+      ease:  "power3.easeOut"
     }, 0.2, "-=1.5")
 
   })
  
   return (
-    <body>
+    <body  ref={el => (app = el)}>
       <header>
         <a href="" class="logo">CatWalk</a>
         <nav>
@@ -86,7 +59,7 @@ function Layout() {
         </nav>
       </header>
       <div className="wrapper">
-        <section className="hero">
+        <section className="hero" >
           <div className="inner">
             <div className="clipper">
               <h1>Be discovered</h1>
