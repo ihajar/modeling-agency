@@ -42,7 +42,7 @@ function Form() {
                             <a href="/" className="logo">CatWalk</a>
                         </div>
                         <div className="right">
-                            <p className="input-text">Start Model life</p>
+                            <p className="input-text">We'll get in touch with you</p>
                             <form method="post" action="https://www.flexyform.com/f/420e3c97bc7e422a37fcf2968db599762602e723" enctype="multipart/form-data">
                                 <div className="name-input">
                                     <input type="text" name="fullname" placeholder="Full Name" required  />

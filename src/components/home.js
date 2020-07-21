@@ -78,10 +78,13 @@ function Home() {
         <section className="sidebar">
           <div className="inner">
             <div className="clipper">
-              <h2>About</h2>
+              <h2>Join Us</h2>
             </div>
             <div className="anim-panel">
-              <p>infor about the modeling agency</p>
+              <p>We discover and manage models and fashion designers worldwide.
+                <br/>
+                We're young, eager and dynamic team, Join us to make difference in fashion industry. 
+              </p>
               <a href="" class="read-btn">Reach out</a>
             </div>
           </div>
